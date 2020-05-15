@@ -89,11 +89,24 @@
         </div>
     </nav>
 
+    <div style = "width: 60%; margin-left: auto;margin-right: auto">
+
+      <h2 style="text-align: center"><br>This page covers the graphs and visulizations from the dataset.</h2>
+
+      
+    </div>
 
     <div>
-    <h3 style="text-align:center">Cases per100k Histogram</h3>
         <img src="https://cxysean.github.io/xc163miniproject/graphs/cases_hist.jpg" alt="umap" class="center" width=40% height=30%>
     </div>
+
+    <div style = "width: 60%; margin-left: auto;margin-right: auto">
+
+      <p style="text-align: left; font-size: 18px;"><br>The above graph shows a histogram of 2931 counties' cases per100k people. We can see it looks like a normal distribution. Some regression models will be conducted to predict the cases.</p>
+
+      
+    </div>
+
 
     <div class="row" style = "width: 60%; margin-left: auto;margin-right: auto">
       <div class="col">
@@ -147,9 +160,9 @@
 
  <div class="row" style = "width: 80%; margin-left: auto;margin-right: auto">
     <div class="col">
-        <p style="font-size: 18px"><br></p>
-        <p style="font-size: 18px"></p>
-        <p style="font-size: 18px"></p>
+        <p style="font-size: 18px"><br><br>The top 4 horizontal bar plots show the top and lowest counties and states. There is one county outstanding in the graph with over 1000 cases per100k people. The states are not strongly different.</p>
+        <p style="font-size: 18px">The right graph is a bar plot of trends among the counties. We can see that most counties are in a stable status.</p>
+        <p style="font-size: 18px">From those graphs, I decide to do some regression model and clustering on the counties. The models are discussed in the model section.</p>
     </div>
 
     <div class="col">
@@ -194,7 +207,7 @@
         <div class="margin-top: auto; margin-bottom: auto;">
         <h4>Boxplots for Cases per 100k</h4>
         <p style="font-size: 18px">The graph on the left shows the boxplot for cases per100k under the influence of super funds and differnet kinds of fuel plants. You can select the fuel or superfund by yourself.</p>
-        <p style="font-size: 18px">From the boxplots, we can see that the mean value is very close. There are a lot of outliers both sides. Actually, the most cases counties have no plants and plants at all.</p>
+        <p style="font-size: 18px">From the boxplots, we can see that the mean value is very close. Only geothermal has a very obvious difference in mean. There are a lot of outliers both sides. Actually, the most cases counties have no plants and plants at all. The correlation graphs below also confirm the results.</p>
       </div>
       </div>
       
@@ -203,11 +216,17 @@
 
     <div class="row" style = "width: 100%; margin-left: auto;margin-right: auto">
       <div class="col">
-        <h4 style="text-align: center;">Correlation Barplot for cases and other factors</h4>
+        <h4 style="text-align: center;">Correlation between cases and other factors</h4>
+        <div style="width: 80%; margin-left: auto;margin-right: auto">
+          <p style="font-size: 18px">The barplot below shows the correlation between cases and superfunds and different plants. We can see that nuclear, biomass, geothermal and cogeneration haave stronger correlation than the other factors. However, some results versus our tradition thinking. In the graph, the nuclear is contradicted to the number of cases.</p>
+        </div>
 
       </div>
       <div class="col">
-        <h4 style="text-align: center;">Correlation Barplot for trend rate and other factors</h4>
+        <h4 style="text-align: center;">Correlation between for trend rate and other factors</h4>
+        <div style="width: 80%; margin-left: auto;margin-right: auto">
+          <p style="font-size: 18px">The barplot below shows the correlation between trend rates and superfunds and different plants. Because the dataset contains these years electricity production, those may reflect the trend rates of current five years. We can see that the more recent the nuclear and petcoke are established the higher the trend rates.</p>
+        </div>
       </div>
 
 
