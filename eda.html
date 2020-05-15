@@ -3,9 +3,7 @@
 <html lang="en">
 <head>
 
-    <link rel="stylesheet" href="/static/demo.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <meta charset="utf-8">
@@ -73,7 +71,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="https://cxysean.github.io/xc163.github.io">County Level Cancer Analysis</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -152,6 +150,9 @@
     <iframe src="https://cxysean.github.io/xc163.github.io/graphs/trend_hist.html" height = 400px width=40% frameBorder="0"></iframe>
     </div>
 
+
+  <div class="row" style = "width: 80%; margin-left: auto;margin-right: auto">
+    <div class="col">
     <div style="text-align:center;">
       <h2 for="f" >Plant fuel and superfund boxplot:</h2>
 
@@ -175,8 +176,16 @@
       </select>
     </div>
     <div>
-      <iframe id="fuel" src="https://cxysean.github.io/xc163.github.io/graphs/overall_boxplot.html" height = 400px width=40% frameBorder="0"></iframe>
+      <iframe id="fuel" src="https://cxysean.github.io/xc163.github.io/graphs/overall_boxplot.html" height = 400px width=100% frameBorder="0"></iframe>
     </div>
+  </div>
+      <div class="col">
+        <h4>Multi Linear Regression</h4>
+        <p style="font-size: 18px">From the correlation bar plot, multi-linear regression is conducted on the data set. The summary of the model is shown on the left. Predicting the cases in a specific region looks impossible. The R^2 is very low in the model.</p>
+        <p style="font-size: 18px">However, the p-values matched the correlation between cases and fuels. </p>
+      </div>
+      
+  </div>
 
 
     <div class="row" style = "width: 100%; margin-left: auto;margin-right: auto">

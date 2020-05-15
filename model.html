@@ -3,8 +3,7 @@
 <html lang="en">
 <head>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -30,7 +29,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="https://cxysean.github.io/xc163.github.io">County Level Cancer Analysis</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -54,19 +53,21 @@
 
     <div class="row" style = "width: 80%; margin-left: auto;margin-right: auto">
       <div class="col">
-        <h2 style="text-align: left;">Multi-Linear Regression</h2>
+        <h2 style="text-align: left;">Linear Regression</h2>
       </div>
       <div class="w-100"></div>
       <div class="col">
         <div class="thumbnail">
-          <a href="https://cxysean.github.io/xc163.github.io/graphs/mlr_summary.png" target="_blank">
             <img src="https://cxysean.github.io/xc163.github.io/graphs/mlr_summary.png" alt="Lights" style="width:100%;">
-          </a>
         </div>
       </div>
       <div class="col">
-        <p> some words on linear regression</p>
-        <p>lalalall</p>
+        <h4>Multi Linear Regression</h4>
+        <p style="font-size: 18px">From the correlation bar plot, multi-linear regression is conducted on the data set. The summary of the model is shown on the left. Predicting the cases in a specific region looks impossible. The R^2 is very low in the model.</p>
+        <p style="font-size: 18px">However, the p-values matched the correlation between cases and fuels. Some fuel plants are more correlated than the others. More research should be on what is the difference between different fuels. For example, what kinds of chemicals are produced during the process of different fuels.</p>
+        <h4>Lasso</h4>
+        <p style="font-size: 18px">From the results left, Lasso is conducted with more features, the year of the plant and the electricity production, to try some feature selection.</p>
+        <p style="font-size: 18px">Only the score of the <strong>superfund, wind and geothermal</strong> are selected. Wind and geothermal have some special requirements in natural resources of the region. The geograph specities of those place shall be taken in to future research.</p>
       </div>
       </div>
 
@@ -74,8 +75,13 @@
 
     <div class="row" style = "width: 80%; margin-left: auto;margin-right: auto">
       <div class="col">
-        <h2 style="text-align: left;">Unsupervised Learning</h2>
+        <h2 style="text-align: left;"><strong>Unsupervised Learning</strong></h2>
 
+      </div>
+      <div class="w-100"></div>
+
+      <div class="col">
+        <h3 style="text-align: center; color: grey;"><i>PCA</i></h3>
       </div>
       <div class="w-100"></div>
     <div class="col">
@@ -86,14 +92,28 @@
       </div>
     </div>
     <div class="col">
-        <h4> some words on PCA</h4>
-        <p>lalalall</p>
+      <div style="width: 100%">
+        <p style="font-size: 18px"><br>Dimension reduction is conducted on the cleaned and preprocessed data set to get a sense of which counties are grouped together. Also the 2-dimension is used to visualize the result of the kmeans later.</p>
+        <p style="font-size: 18px">The colors here are the trends: stable, falling and rising. From the barplot, we know that the data is very imbalanced. We can see most of the points are group in a corner. Because there are too many counties without any plants and superfunds. </p>
+        <p style="font-size: 18px">There are no obvious patterns we can observe from the 2-d PCA. Because most of the columns are with too many missing values.</p>
+      </div>
+
     </div>
+
+
+
+    <div class="w-100"></div>
+
+
+    <div class="col">
+        <h3 style="text-align: center; color: grey;"><i>Kmeans</i></h3>
+      </div>
 
     <div class="w-100"></div>
     <div class="col">
-        <h4> some words on kmeans</h4>
-        <p>lalalall</p>
+        <p style="font-size: 18px"><br>Kmeans method is counducted to try to distinguish and visualize the county. We used k=3, because we just want to find out if we can configure the trends of the counties.</p>
+        <p style="font-size: 18px">From the results on the right, there is no obvious difference between the labels. By looking into the labels and trends, I do not think kmeans is doing a great job.</p>
+        <p style="font-size: 18px">I also tried some other methods on the trend. However, none of the methods give a strong results. I think the current trend should be influenced by something much longer ago. So, the recent data cannot explain the trend.</p>
     </div>
 
     <div class="col">
@@ -106,17 +126,22 @@
 
 
     <div class="w-100"></div>
+    <div class="col">
+        <h3 style="text-align: center; color: grey;"><i>UMAP</i></h3>
+      </div>
 
-    <div class="col-8">
-        <div class="thumbnail">
+    <div class="w-100"></div>
+
+    <div class="col">
+        <div class="thumbnail" style="text-align: center;">
           <a href="https://cxysean.github.io/xc163.github.io/graphs/umap.jpg" target="_blank">
-            <img src="https://cxysean.github.io/xc163.github.io/graphs/umap.jpg" alt="Lights" style="width:100%;">
+            <img src="https://cxysean.github.io/xc163.github.io/graphs/umap.jpg" alt="Lights" style="width:50%;">
           </a>
         </div>
       </div>
       <div class="col">
-        <h4> some words on umap</h4>
-        <p>lalalall</p>
+        <p style="font-size: 18px"><br>UMAP is conducted to understand more about the cases or other factors about counties given by plants and superfunds.</p>
+        <p style="font-size: 18px">The graph is shown on the left. It looks like a ring. From left tail to right tail, the cases per 100 k is increasing. Other discover is not found.</p>
     </div>
 
 
