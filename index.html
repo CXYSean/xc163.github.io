@@ -18,6 +18,12 @@
     display:block;
    }
 
+  .center {
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   </style>
 
 
@@ -45,9 +51,30 @@
       </nav>
 
 
+    <h1 style="text-align: center;">County Level Cancer Analysis</h1>
+
+    <div class="center" style = "width: 80%; margin-left: auto;margin-right: auto">
+
+
+      
+    </div>
+
+
     <div>
-    <h2 style="text-align:center">Map View</h2>
-    <iframe src="https://cxysean.github.io/xc163miniproject/graphs/US_county_cancer_poll_map.html" height = 800px width=70% frameBorder="0"></iframe>
+      <iframe src="https://cxysean.github.io/xc163miniproject/graphs/US_county_cancer_poll_map.html" height = 500px width=60% frameBorder="0"></iframe>
+    </div>
+
+    <div style = "width: 60%; margin-left: auto;margin-right: auto">
+      <p style="font-size: 18px"><br>Cancer is one of the most severe health issues that struggles the people now. This miniproject provides the dataset of cancer stats on a county level. There are two other datasets about plants and superfunds. I want to check if those environment factors can give us some insight in cancer rates. The above interactive map shows the cancer cases per 100k people. The blue points are the locations of superfunds and the grey points are the places of the plants. The grey points also show the primary fuel of the plants.</p>
+      <p style="font-size: 18px">There are in total 2931 counties in our dataset. Two states are entirely missing, Kansas and Minnesota. Kentucky, Delaware and New York has the highest cases per 100k among all the states provided. Arizona, Puerto Rico and Colorado are the lowest in contrast. However, it is very hard to find out why those states are higher or lower than others by just the other two datasets. </p>
+      <p style="font-size: 18px">Looking into top counties, some counties are caused by the population. If the population is too small, the cases per 100k will easily become very high. Some higher counties do not show a very obvious reason behind the high rates. The highest county is union county in Florida  where a prison is located. This may contribute to the highist rate of that county.</p>
+
+      <p style="font-size: 18px">I merge the data from superfunds and power plants to the cancer dataset. First I get the plants and superfunds county by using the google api. Then I create severl new coloumns representing the counts of superfunds, different fuel plants and the year those are established also the power the plants generated. The detailed viuslizations are in the EDA section and models are in the model section. There are no strong implication from the visulizations and models I applied on the data. However, there are some findings can lead to further study and some are contradicted to our original thoughts. For instance the nuclear plants may not be harmful to the people nearby.</p>
+
+      <p style="font-size: 18px">For the models, regression models and clustering and umap are tried on different features, cases and trend rate. However, there is not a lot useful model obtained from the results. For instance, rather than the fuel type of the power plants, the geology of place shall be more important. The detailed results are in the model page. </p>
+
+      <o style="font-size: 18px">In conclusion, cancer is very complicated problem. It involves so many differenct areas to study. Rather than the place, people should be more concentrated on their living style. The environment does have some influence on people's health. However, from the data, at least, the power plant and superfunds play a small role in cancer.</o>
+
     </div>
 
 
